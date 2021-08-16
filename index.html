@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="styles.css" />
+		<title>School Registration - Student</title>
+	</head>
+	<body>
+		<div id="form-content">
+			<form method="GET">
+				<div id="heading">Form for Student Registration</div>
+				<center><span>*</span> Specifies mandatory field</center>
+
+				<h3>1. Enter Student's full name <span>*</span></h3>
+				<input
+					type="text"
+					placeholder="Eg. Neeraj Chopra"
+					name="name"
+					required
+					autofocus
+				/>
+
+				<h3>2. Enter Parent's email ID <span>*</span></h3>
+				<input
+					type="email"
+					placeholder="Eg. abc@xyz.com"
+					name="email"
+					required
+				/>
+
+				<h3>3. Enter Parent's alternate email ID</h3>
+				<input
+					type="email"
+					placeholder="Eg. abc@xyz.com"
+					name="alternate email"
+				/>
+
+				<h3>4. Enter Parent's contact no <span>*</span></h3>
+				<input
+					type="tel"
+					placeholder="Eg. 1234567890"
+					pattern="[0-9]{10}"
+					name="contact"
+					required
+				/>
+
+				<h3>5. Enter Parent's alternate contact no</h3>
+				<input
+					type="tel"
+					placeholder="Eg. 1234567890"
+					pattern="[0-9]{10}"
+					name="alternate contact"
+				/>
+
+				<h3>6. Age of the Student <span>*</span></h3>
+				<input
+					type="number"
+					min="15"
+					max="18"
+					placeholder="Eg. 16"
+					name="age"
+					required
+				/>
+
+				<h3>7. Date of Birth <span>*</span></h3>
+				<input type="date" name="DOB" required />
+
+				<h3>8. Gender of the student <span>*</span></h3>
+				<input type="radio" id="male" name="gender" checked value="male" />
+				<label for="male">Male</label><br />
+				<input type="radio" id="female" name="gender" value="female" />
+				<label for="female">Female</label><br />
+				<input type="radio" id="other" name="gender" value="other" />
+				<label for="other">Other</label>
+
+				<h3>9. Subject Selection <span>*</span></h3>
+				<input
+					type="text"
+					list="subject"
+					name="subject"
+					placeholder="Start by typingSc/Ec/Ar"
+					required
+				/>
+				<datalist id="subject">
+					<option value="Science">Maths + Science</option>
+					<option value="Economics">Maths + Economics</option>
+					<option value="Arts">Maths + Arts</option>
+				</datalist>
+
+				<h3>10. Upload Student's 10th class marksheet card <span>*</span></h3>
+				<input type="file" name="fileupload" required />
+
+				<h3>11. Sports played by student</h3>
+				<input type="checkbox" id="football" name="sport" value="football" />
+				<label for="football">Football</label><br />
+				<input type="checkbox" id="cricket" name="sport" value="cricket" />
+				<label for="cricket">Cricket</label><br />
+				<input
+					type="checkbox"
+					id="basketball"
+					name="sport"
+					value="basketball"
+				/>
+				<label for="basketball">Basketball</label><br />
+
+				<h3>12. Any Query?</h3>
+				<input
+					type="textarea"
+					name="query"
+					placeholder="Type a query"
+				/><br /><br />
+
+				<center>
+					<input type="submit" />
+					<input type="reset" />
+				</center>
+			</form>
+		</div>
+	</body>
+</html>
